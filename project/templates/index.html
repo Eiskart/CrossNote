@@ -1,0 +1,14 @@
+{% extends 'layout.html' %}
+
+{% block title %}
+Home
+{% endblock %}
+{% block main %}
+<button class="btn btn-success" id='save'>Save</button>
+<hr>
+{% if content %}
+<div id='content' contenteditable='true'>{{content | safe}}</div>
+{% else %}
+<div id='content' contenteditable='true'>Edit me!</div>
+{% endif %}
+{% endblock %}

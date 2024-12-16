@@ -1,0 +1,72 @@
+html, body{
+    height:100%;
+    width:100%;
+    overflow-x :hidden;
+}
+body{
+    background-image: url("background.png");
+    background-size: cover;
+    background-position: center center;
+    background-repeat: no-repeat;
+    background-attachment: scroll;
+}
+.container {
+    height: auto;
+    background-color: white;
+    margin: 20px auto;
+    padding: 20px;
+    max-width: 90%;
+    border-radius: 10px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    overflow: visible;
+}
+#error-mes{ position: fixed; bottom: 0; left: 0; width: 100%; background-color: #ed053b; color: white; padding: 10px; border-top: 1px solid #f5c6cb; text-align: center; box-sizing: border-box; }
+
+nav ul {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+    border-radius: 10px;
+    background-color:white;
+}
+nav ul li{
+    margin: 0;
+}
+
+li a {
+    display: block;
+    color: white;
+    text-align: center;
+    padding: 14px 20px;
+    text-decoration: none;
+    background-color: #f5dcf2;
+    border-radius: 10px;
+}
+nav ul li.right {
+    margin-left: 10px;
+}
+
+li a:hover {
+    background-color: #f2c9ee;
+}
+.left {
+    margin-right:auto;
+}
+
+.right {
+    margin-left: auto;
+}
+.typespace{
+    flex: 1;
+}
+
+
+#content{
+    width:100%;
+    min-height:100px;
+    padding:10px;
+    box-sizing: border-box;
+}

@@ -1,0 +1,39 @@
+{% extends "layout.html" %}
+{% block title%}
+Account
+{% endblock %}
+{% block main %}
+{% if change == 'username' %}
+<form method='post'>
+    <div class="mb-3">
+        <input autocomplete="off" autofocus class="form-control mx-auto w-auto" name="new" placeholder="New username" type="text">
+    </div>
+    <button class="btn btn-primary" type="submit" name='change' value='Cname'>Change</button>
+</form>
+{% elif change == 'hash' %}
+<form method='post'>
+    <div class="mb-3">
+        <input autocomplete="off" autofocus class="form-control mx-auto w-auto" name="old" placeholder="Old password" type="text">
+    </div>
+    <div class="mb-3">
+        <input autocomplete="off" autofocus class="form-control mx-auto w-auto" name="new" placeholder="New password" type="text">
+    </div>
+    <button class="btn btn-primary" type="submit" name='change' value='Cpass'>Change</button>
+    </form>
+{% else %}
+<form method='post'>
+    <button class="btn btn-primary" type="submit" name='change' value='username'>Change Name</button>
+    <button class="btn btn-primary" type="submit" name='change' value='hash'>Change Password</button>
+    </form>
+    <hr>
+<div>Account Name: {{name}}</div>
+
+{% endif %}
+{% if error %}
+<script>
+    document.addEventListener('DOMContentLoaded',function(){
+        ErrorMessage("{{error}}");
+    });
+</script>
+{% endif %}
+{% endblock %}
